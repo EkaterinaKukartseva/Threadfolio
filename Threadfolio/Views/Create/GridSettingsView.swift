@@ -61,6 +61,18 @@ struct GridSettingsView: View {
                     }
                     .tint(.accent)
                     .foregroundStyle(.ink)
+
+                    if draft.sampleImageColors {
+                        NumberStepperRow(
+                            title: draft.craft == .crossStitch ? "Number of threads" : "Number of colors",
+                            value: $draft.colorCount, range: PatternDraft.colorRange
+                        )
+                        NavigationLink("Select chart area") {
+                            ChartAreaView(draft: draft)
+                        }
+                        .font(.subheadline)
+                        .tint(.accentDark)
+                    }
                 }
             }
             .padding(20)

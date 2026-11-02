@@ -407,6 +407,16 @@
         }
       }
     },
+    "Chart Area" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Область схемы"
+          }
+        }
+      }
+    },
     "Chart Photo" : {
       "localizations" : {
         "ru" : {
@@ -553,6 +563,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Перенести цвета с фото"
+          }
+        }
+      }
+    },
+    "Could not detect the grid. Set the size manually." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось определить сетку. Задайте размер вручную."
           }
         }
       }
@@ -707,6 +727,16 @@
         }
       }
     },
+    "Detect grid size" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Определить размер сетки"
+          }
+        }
+      }
+    },
     "Done" : {
       "localizations" : {
         "ru" : {
@@ -733,6 +763,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "2 столбика вместе"
+          }
+        }
+      }
+    },
+    "Drag the corners so the frame matches the chart grid, then detect its size." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перетащите углы так, чтобы рамка совпала с сеткой схемы, затем определите её размер."
           }
         }
       }
@@ -903,6 +943,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Настройки сетки"
+          }
+        }
+      }
+    },
+    "Grid: %lld × %lld" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сетка: %1$lld × %2$lld"
           }
         }
       }
@@ -1133,6 +1183,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ничего не найдено"
+          }
+        }
+      }
+    },
+    "Number of colors" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Количество цветов"
+          }
+        }
+      }
+    },
+    "Number of threads" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Количество ниток"
           }
         }
       }
@@ -1393,6 +1463,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Поиск"
+          }
+        }
+      }
+    },
+    "Select chart area" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрать область схемы"
           }
         }
       }

@@ -54,10 +54,10 @@ struct ThreadUsageTests {
         #expect(threads.map(\.count) == [2, 1, 1])
     }
 
-    @Test func backgroundAndEmptyCellsAreNotThreads() {
+    @Test func fillCountsOnlyWithoutSymbol() {
         let cells = [Cell.empty, Cell(background: .palette(.beige)), Cell(symbol: .fullCross, background: .palette(.beige))]
         let threads = ThreadUsage.count(in: cells)
-        #expect(threads == [ThreadUsage(color: .default, count: 1)])
+        #expect(threads == [ThreadUsage(color: .default, count: 1), ThreadUsage(color: .palette(.beige), count: 1)])
     }
 
     @Test func colorsIncludeSymbolsAndFills() {
@@ -90,10 +90,10 @@ struct ChartColorsTests {
         #expect(ThreadUsage.otherColors(of: pattern) == [.palette(.blue), .palette(.green)])
     }
 
-    @Test func crossStitchListsFillsSeparatelyFromThreads() {
+    @Test func crossStitchCountsFillsAsThreads() {
         let pattern = Pattern(name: "Test", craft: .crossStitch, columns: 2, rows: 1, cells: cells)
-        #expect(ThreadUsage.threads(of: pattern).map(\.color) == [.palette(.blue)])
-        #expect(ThreadUsage.otherColors(of: pattern) == [.palette(.green)])
+        #expect(ThreadUsage.threads(of: pattern).map(\.color) == [.palette(.blue), .palette(.green)])
+        #expect(ThreadUsage.otherColors(of: pattern).isEmpty)
     }
 }
 

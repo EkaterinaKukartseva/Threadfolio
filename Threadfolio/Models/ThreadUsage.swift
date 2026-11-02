@@ -15,12 +15,16 @@ nonisolated struct ThreadUsage: Identifiable, Equatable {
 
     var id: CellColor { color }
 
-    /// Цвета значков в клетках, от самого частого к редкому.
-    /// Пустые клетки и заливка фона не считаются: фон — это канва, а не нитка.
+    /// Нитки схемы, от самой частой к редкой. Клетка считается по цвету значка,
+    /// а если значка нет — по заливке: так выглядят схемы, перенесённые с фото.
     static func count(in cells: [Cell]) -> [Self] {
         var counts: [CellColor: Int] = [:]
-        for cell in cells where cell.symbol != nil {
-            counts[cell.color ?? .default, default: 0] += 1
+        for cell in cells {
+            if cell.symbol != nil {
+                counts[cell.color ?? .default, default: 0] += 1
+            } else if let background = cell.background {
+                counts[background, default: 0] += 1
+            }
         }
         return ranked(counts)
     }
