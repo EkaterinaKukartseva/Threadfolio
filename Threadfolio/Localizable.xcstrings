@@ -1,16 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "%@ (copy)" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ (копия)"
-          }
-        }
-      }
-    },
     "%@ · %lld stitches × %lld rows" : {
       "localizations" : {
         "en" : {
@@ -145,6 +135,16 @@
         }
       }
     },
+    "%@ (copy)" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ (копия)"
+          }
+        }
+      }
+    },
     "%lld stitches" : {
       "localizations" : {
         "en" : {
@@ -168,12 +168,6 @@
         "ru" : {
           "variations" : {
             "plural" : {
-              "one" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "%lld стежок"
-                }
-              },
               "few" : {
                 "stringUnit" : {
                   "state" : "translated",
@@ -186,6 +180,12 @@
                   "value" : "%lld стежков"
                 }
               },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld стежок"
+                }
+              },
               "other" : {
                 "stringUnit" : {
                   "state" : "translated",
@@ -193,6 +193,86 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "¼ cross, bottom left" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¼ креста, слева снизу"
+          }
+        }
+      }
+    },
+    "¼ cross, bottom right" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¼ креста, справа снизу"
+          }
+        }
+      }
+    },
+    "¼ cross, top left" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¼ креста, слева сверху"
+          }
+        }
+      }
+    },
+    "¼ cross, top right" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¼ креста, справа сверху"
+          }
+        }
+      }
+    },
+    "¾ cross, bottom left" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¾ креста, слева снизу"
+          }
+        }
+      }
+    },
+    "¾ cross, bottom right" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¾ креста, справа снизу"
+          }
+        }
+      }
+    },
+    "¾ cross, top left" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¾ креста, слева сверху"
+          }
+        }
+      }
+    },
+    "¾ cross, top right" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¾ креста, справа сверху"
           }
         }
       }
@@ -213,6 +293,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "О схеме"
+          }
+        }
+      }
+    },
+    "Add" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить"
           }
         }
       }
@@ -377,6 +467,16 @@
         }
       }
     },
+    "Catalog" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каталог"
+          }
+        }
+      }
+    },
     "Cell Fill" : {
       "localizations" : {
         "ru" : {
@@ -417,16 +517,6 @@
         }
       }
     },
-    "Chart Photo" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Фото схемы"
-          }
-        }
-      }
-    },
     "Chart grid" : {
       "localizations" : {
         "ru" : {
@@ -443,6 +533,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Название схемы"
+          }
+        }
+      }
+    },
+    "Chart Photo" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фото схемы"
           }
         }
       }
@@ -467,12 +567,12 @@
         }
       }
     },
-    "Choose Symbol" : {
+    "Charts to add to your library." : {
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Выбрать символ"
+            "value" : "Схемы для вашей библиотеки."
           }
         }
       }
@@ -488,6 +588,16 @@
       }
     },
     "Choose stitch symbol" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрать символ"
+          }
+        }
+      }
+    },
+    "Choose Symbol" : {
       "localizations" : {
         "ru" : {
           "stringUnit" : {
@@ -607,22 +717,22 @@
         }
       }
     },
-    "Create Chart" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Создать схему"
-          }
-        }
-      }
-    },
     "Create a chart from scratch or import a photo of an existing one." : {
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Создайте схему с нуля или загрузите фото готовой схемы."
+          }
+        }
+      }
+    },
+    "Create Chart" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Создать схему"
           }
         }
       }
@@ -917,6 +1027,16 @@
         }
       }
     },
+    "Fly Agaric" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мухомор"
+          }
+        }
+      }
+    },
     "French knot" : {
       "localizations" : {
         "ru" : {
@@ -1177,12 +1297,32 @@
         }
       }
     },
+    "Little Heart" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сердечко"
+          }
+        }
+      }
+    },
     "Magic ring" : {
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Кольцо амигуруми"
+          }
+        }
+      }
+    },
+    "Meadow Flower" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Луговой цветок"
           }
         }
       }
@@ -1297,6 +1437,16 @@
         }
       }
     },
+    "Open" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть"
+          }
+        }
+      }
+    },
     "Paste" : {
       "localizations" : {
         "ru" : {
@@ -1397,6 +1547,16 @@
         }
       }
     },
+    "Purl Diamond" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ромб изнаночными"
+          }
+        }
+      }
+    },
     "Redo" : {
       "localizations" : {
         "ru" : {
@@ -1407,22 +1567,22 @@
         }
       }
     },
-    "Remove Photo" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Удалить фото"
-          }
-        }
-      }
-    },
     "Remove from Favorites" : {
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Убрать из избранного"
+          }
+        }
+      }
+    },
+    "Remove Photo" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить фото"
           }
         }
       }
@@ -1683,6 +1843,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Снятая петля"
+          }
+        }
+      }
+    },
+    "Snowflake" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Снежинка"
+          }
+        }
+      }
+    },
+    "Star" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Звезда"
           }
         }
       }
@@ -2003,86 +2183,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Уменьшить"
-          }
-        }
-      }
-    },
-    "¼ cross, bottom left" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¼ креста, слева снизу"
-          }
-        }
-      }
-    },
-    "¼ cross, bottom right" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¼ креста, справа снизу"
-          }
-        }
-      }
-    },
-    "¼ cross, top left" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¼ креста, слева сверху"
-          }
-        }
-      }
-    },
-    "¼ cross, top right" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¼ креста, справа сверху"
-          }
-        }
-      }
-    },
-    "¾ cross, bottom left" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¾ креста, слева снизу"
-          }
-        }
-      }
-    },
-    "¾ cross, bottom right" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¾ креста, справа снизу"
-          }
-        }
-      }
-    },
-    "¾ cross, top left" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¾ креста, слева сверху"
-          }
-        }
-      }
-    },
-    "¾ cross, top right" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¾ креста, справа сверху"
           }
         }
       }

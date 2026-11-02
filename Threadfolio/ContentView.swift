@@ -12,7 +12,7 @@ import SwiftData
 @Observable
 final class AppRouter {
     
-    enum Tab: Hashable { case patterns, create, legend, profile }
+    enum Tab: Hashable { case patterns, catalog, legend, profile }
 
     var selectedTab: Tab = .patterns
     var libraryPath = NavigationPath()
@@ -31,19 +31,7 @@ struct ContentView: View {
     @AppStorage(OnboardingView.storageKey) private var hasSeenOnboarding = false
 
     var body: some View {
-        // Вкладка «Создать» не переключает экран, а открывает мастер создания.
-        let tabSelection = Binding<AppRouter.Tab>(
-            get: { router.selectedTab },
-            set: { tab in
-                if tab == .create {
-                    router.isCreating = true
-                } else {
-                    router.selectedTab = tab
-                }
-            }
-        )
-
-        TabView(selection: tabSelection) {
+        TabView(selection: $router.selectedTab) {
             SwiftUI.Tab("Charts", systemImage: "house", value: AppRouter.Tab.patterns) {
                 NavigationStack(path: $router.libraryPath) {
                     LibraryView()
@@ -52,8 +40,8 @@ struct ContentView: View {
                         }
                 }
             }
-            SwiftUI.Tab("Create", systemImage: "plus.square", value: AppRouter.Tab.create) {
-                Color.clear
+            SwiftUI.Tab("Catalog", systemImage: "square.grid.2x2", value: AppRouter.Tab.catalog) {
+                NavigationStack { CatalogView() }
             }
             SwiftUI.Tab("Symbols", systemImage: "book.closed", value: AppRouter.Tab.legend) {
                 NavigationStack { LegendView() }

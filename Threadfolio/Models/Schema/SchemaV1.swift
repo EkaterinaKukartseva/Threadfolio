@@ -44,6 +44,8 @@ extension SchemaV1 {
         var isFavorite: Bool
         /// Дополнительные цвета, добавленные пользователем (JSON-массив `Color.Resolved`).
         var customColorsData: Data = Data()
+        /// Позиция каталога, из которой добавлена схема; `nil` — своя схема.
+        var catalogItemID: String?
         var createdAt: Date
         var updatedAt: Date
         

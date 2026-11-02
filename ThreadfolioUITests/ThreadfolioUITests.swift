@@ -31,7 +31,7 @@ final class ThreadfolioUITests: XCTestCase {
 
     /// Создаёт схему через мастер и оставляет открытым редактор.
     private func createChart(named name: String) {
-        app.tabBars.buttons["Create"].tap()
+        app.buttons["Create Chart"].firstMatch.tap()
         app.buttons["Continue"].tap()
 
         let nameField = app.textFields["Chart name"]
@@ -73,7 +73,7 @@ final class ThreadfolioUITests: XCTestCase {
 
     func testCancelCreationLeavesLibraryEmpty() {
         launch()
-        app.tabBars.buttons["Create"].tap()
+        app.buttons["Create Chart"].firstMatch.tap()
         app.buttons["Cancel"].tap()
         XCTAssertTrue(app.staticTexts["Your charts will appear here"].waitForExistence(timeout: 3))
     }
@@ -164,11 +164,29 @@ final class ThreadfolioUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["Nothing found"].waitForExistence(timeout: 3))
     }
 
+    // MARK: Каталог
+
+    func testCatalogChartIsAddedOnceAndOpens() {
+        launch()
+        app.buttons["Catalog"].firstMatch.tap()
+
+        let add = app.buttons["catalogAdd-crochet-heart"]
+        XCTAssertTrue(add.waitForExistence(timeout: 3))
+        add.tap()
+
+        let open = app.buttons["catalogOpen-crochet-heart"]
+        XCTAssertTrue(open.waitForExistence(timeout: 3))
+        XCTAssertFalse(add.exists)
+
+        open.tap()
+        XCTAssertTrue(app.otherElements["chartCanvas"].waitForExistence(timeout: 3))
+    }
+
     // MARK: Профиль
 
     func testProfileShowsStatsAndVersion() {
         launch(withSamples: true)
-        app.tabBars.buttons["Profile"].tap()
+        app.buttons["Profile"].firstMatch.tap()
 
         XCTAssertTrue(app.staticTexts["Version"].waitForExistence(timeout: 3))
         XCTAssertTrue(app.staticTexts["4"].exists, "Total number of sample charts")
