@@ -477,6 +477,16 @@
         }
       }
     },
+    "Choose a stitch and a color, then tap a cell or drag across the grid." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите стежок и цвет, затем нажмите на клетку или проведите по сетке."
+          }
+        }
+      }
+    },
     "Choose stitch symbol" : {
       "localizations" : {
         "ru" : {
@@ -613,6 +623,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Создайте схему с нуля или загрузите фото готовой схемы."
+          }
+        }
+      }
+    },
+    "Create charts for crochet, knitting and cross-stitch." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Создавайте схемы для крючка, спиц и вышивки крестиком."
           }
         }
       }
@@ -777,6 +797,16 @@
         }
       }
     },
+    "Draw stitch by stitch" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рисуйте по стежкам"
+          }
+        }
+      }
+    },
     "Duplicate" : {
       "localizations" : {
         "ru" : {
@@ -803,6 +833,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ластик"
+          }
+        }
+      }
+    },
+    "Export a chart with its legend as an image." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Экспортируйте схему с легендой в виде картинки."
           }
         }
       }
@@ -937,6 +977,16 @@
         }
       }
     },
+    "Get Started" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Начать"
+          }
+        }
+      }
+    },
     "Grid Settings" : {
       "localizations" : {
         "ru" : {
@@ -1003,6 +1053,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Высота (ряды)"
+          }
+        }
+      }
+    },
+    "Import from a photo" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Импорт с фото"
           }
         }
       }
@@ -1153,6 +1213,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Новая схема"
+          }
+        }
+      }
+    },
+    "Next" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Далее"
           }
         }
       }
@@ -1507,6 +1577,16 @@
         }
       }
     },
+    "Share your work" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Делитесь работой"
+          }
+        }
+      }
+    },
     "Shell" : {
       "localizations" : {
         "ru" : {
@@ -1563,6 +1643,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Размер"
+          }
+        }
+      }
+    },
+    "Skip" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пропустить"
           }
         }
       }
@@ -1653,6 +1743,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Как в системе"
+          }
+        }
+      }
+    },
+    "Take a picture of a chart, and the app will transfer its grid and colors." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сфотографируйте схему, и приложение перенесёт её сетку и цвета."
           }
         }
       }
@@ -1863,6 +1963,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Действие можно отменить кнопкой «Отменить»."
+          }
+        }
+      }
+    },
+    "Your charts in one place" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Все схемы в одном месте"
           }
         }
       }

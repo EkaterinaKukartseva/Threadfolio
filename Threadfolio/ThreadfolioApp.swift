@@ -33,7 +33,7 @@ struct ThreadfolioApp: App {
     }()
 
     /// UI-тесты запускают приложение с `-uiTesting`: каждый тест начинает с пустой базы в памяти.
-    private static var isUITesting: Bool {
+    static var isUITesting: Bool {
         #if DEBUG
         CommandLine.arguments.contains("-uiTesting")
         #else

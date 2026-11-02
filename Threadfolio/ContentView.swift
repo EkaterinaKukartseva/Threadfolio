@@ -28,6 +28,7 @@ final class AppRouter {
 struct ContentView: View {
     
     @State private var router = AppRouter()
+    @AppStorage(OnboardingView.storageKey) private var hasSeenOnboarding = false
 
     var body: some View {
         // Вкладка «Создать» не переключает экран, а открывает мастер создания.
@@ -68,6 +69,12 @@ struct ContentView: View {
                 router.isCreating = false
                 router.open(pattern)
             }
+        }
+        .fullScreenCover(isPresented: Binding(
+            get: { !hasSeenOnboarding && !ThreadfolioApp.isUITesting },
+            set: { if !$0 { hasSeenOnboarding = true } }
+        )) {
+            OnboardingView()
         }
     }
 }
