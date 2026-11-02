@@ -12,6 +12,9 @@ struct ProfileView: View {
     
     @Query private var patterns: [Pattern]
     @AppStorage(AppTheme.storageKey) private var theme: AppTheme = .system
+    @Environment(\.openURL) private var openURL
+    /// Почта не настроена: показываем адрес, чтобы его можно было скопировать.
+    @State private var isShowingMailAddress = false
 
     var body: some View {
         List {
@@ -31,6 +34,11 @@ struct ProfileView: View {
                 statRow("Cross-stitch", patterns.filter { $0.craft == .crossStitch }.count, icon: Craft.crossStitch.icon)
                 statRow("Favorites", patterns.filter(\.isFavorite).count, icon: "heart")
             }
+            Section("Support") {
+                Button(action: contactDeveloper) {
+                    Label("Contact the Developer", systemImage: "envelope").foregroundStyle(Color.ink)
+                }
+            }
             Section {
                 LabeledContent {
                     Text(verbatim: appVersion).monospacedDigit()
@@ -44,6 +52,23 @@ struct ProfileView: View {
         .scrollContentBackground(.hidden)
         .background(Color.background)
         .navigationTitle("Profile")
+        .alert("Couldn’t open Mail", isPresented: $isShowingMailAddress) {
+            Button("Copy Address") { UIPasteboard.general.string = SupportMail.address }
+            Button("Close", role: .cancel) {}
+        } message: {
+            Text("Write to us at \(SupportMail.address)")
+        }
+    }
+
+    private func contactDeveloper() {
+        let mail = SupportMail.url(appVersion: appVersion, system: SupportMail.systemVersion, device: SupportMail.deviceModel)
+        guard let mail else {
+            isShowingMailAddress = true
+            return
+        }
+        openURL(mail) { accepted in
+            if !accepted { isShowingMailAddress = true }
+        }
     }
 
     /// «1.0 (1)» — версия из App Store и номер сборки.
