@@ -27,4 +27,14 @@ struct SupportMailTests {
     @Test func deviceModelIsNotEmpty() {
         #expect(!SupportMail.deviceModel.isEmpty)
     }
+
+    @Test func privacyPolicyFollowsInterfaceLanguage() {
+        #expect(PrivacyPolicy.url(language: "ru")?.lastPathComponent == "privacy-ru.html")
+        #expect(PrivacyPolicy.url(language: "en")?.lastPathComponent == "privacy.html")
+    }
+
+    @Test func reviewLinkOpensWriteReviewPage() {
+        let url = AppStoreReview.url(appID: "1234567890")
+        #expect(url?.absoluteString == "https://apps.apple.com/app/id1234567890?action=write-review")
+    }
 }

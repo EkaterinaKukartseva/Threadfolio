@@ -5,6 +5,7 @@
 //  Created by Ekaterina on 26.10.2026.
 //
 
+import StoreKit
 import SwiftUI
 import SwiftData
 
@@ -29,6 +30,12 @@ struct ContentView: View {
     
     @State private var router = AppRouter()
     @AppStorage(OnboardingView.storageKey) private var hasSeenOnboarding = false
+    @AppStorage("createdChartsCount") private var createdChartsCount = 0
+    @Environment(\.requestReview) private var requestReview
+    /// Окно оценки ждёт, пока закроется мастер создания схемы.
+    @State private var isReviewDue = false
+
+    private static let chartsBeforeReview = 3
 
     var body: some View {
         TabView(selection: $router.selectedTab) {
@@ -52,10 +59,12 @@ struct ContentView: View {
         }
         .tint(Color.accentDark)
         .environment(router)
-        .sheet(isPresented: $router.isCreating) {
+        .sheet(isPresented: $router.isCreating, onDismiss: requestReviewIfNeeded) {
             CreatePatternFlow { pattern in
                 router.isCreating = false
                 router.open(pattern)
+                createdChartsCount += 1
+                isReviewDue = createdChartsCount == Self.chartsBeforeReview
             }
         }
         .fullScreenCover(isPresented: Binding(
@@ -64,6 +73,12 @@ struct ContentView: View {
         )) {
             OnboardingView()
         }
+    }
+
+    private func requestReviewIfNeeded() {
+        guard isReviewDue else { return }
+        isReviewDue = false
+        if !ThreadfolioApp.isUITesting { requestReview() }
     }
 }
 

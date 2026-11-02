@@ -1467,6 +1467,16 @@
         }
       }
     },
+    "Privacy Policy" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Политика конфиденциальности"
+          }
+        }
+      }
+    },
     "Profile" : {
       "localizations" : {
         "ru" : {
@@ -2093,6 +2103,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ширина (петли)"
+          }
+        }
+      }
+    },
+    "Write a Review" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оставить отзыв"
           }
         }
       }

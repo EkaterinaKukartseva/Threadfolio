@@ -38,6 +38,16 @@ struct ProfileView: View {
                 Button(action: contactDeveloper) {
                     Label("Contact the Developer", systemImage: "envelope").foregroundStyle(Color.ink)
                 }
+                if let reviewURL = AppStoreReview.url {
+                    Link(destination: reviewURL) {
+                        Label("Write a Review", systemImage: "star").foregroundStyle(Color.ink)
+                    }
+                }
+                if let privacyURL = PrivacyPolicy.url {
+                    Link(destination: privacyURL) {
+                        Label("Privacy Policy", systemImage: "hand.raised").foregroundStyle(Color.ink)
+                    }
+                }
             }
             Section {
                 LabeledContent {
